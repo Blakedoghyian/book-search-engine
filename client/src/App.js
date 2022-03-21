@@ -5,6 +5,7 @@ import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 
+import { setContext } from '@apollo/client/link/context';
 //establish a new link to the GraphQL server at its /graphql endpoint with createHttpLink()
 const httpLink = createHttpLink({
   uri: '/graphql',
